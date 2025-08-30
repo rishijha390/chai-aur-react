@@ -20,4 +20,6 @@ export const todoSlice = createSlice({
             id !== action.payload )
         },
     }
-})
+});
+export const { addTodo, removeTodo } = todoSlice.actions;
+export default todoSlice.reducer;
