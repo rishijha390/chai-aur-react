@@ -1,11 +1,12 @@
-import {CreateSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+
 
 const initialState = {
     status: false,
     userData: null
 }
 
-const AuthSlice = CreateSlice({
+const AuthSlice = createSlice({
     name: "auth",
     initialState,
     reducers: { 
