@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import {Link,useNavigate} from 'react-router-dom'
-import {Login as authLogin} from 'store/authSlice'
+import {login as authLogin} from '../Store/AuthSlice'
 import {Button , Input , Logo} from "./index"
 import {useDispatch} from 'react-redux'
-import authService from "../appwrite/auth"
+import authService from "../appwrite/Auth"
 import {useForm} from 'react-hook-form'
 
 function Login() {
@@ -50,8 +50,7 @@ function Login() {
                         Sign Up
                     </Link>
         </p>
-        {error && <p className="text-red-600 mt-8}
-        text-center">{error}</p>}
+        {error && <p className="text-red-600 mt-8} text-center">{error}</p>}
         <form onSubmit={handleSubmit(login)}
         className='mt-8'>
            <div className='space-y-5'>
